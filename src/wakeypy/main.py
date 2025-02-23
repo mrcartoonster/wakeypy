@@ -6,21 +6,24 @@ import typer
 from .functions import keep_presenting, keep_returning, version_callback
 from .text_print import running_presenting, running_programs
 
-app = typer.Typer()
+app = typer.Typer(rich_markup_mode="rich")
 
 
 # Create -h short name
 CONTEXT_SETTING = dict(help_option_names=["-h", "--help"])
 
 
-@app.command(context_settings=CONTEXT_SETTING)
+@app.command(
+    context_settings=CONTEXT_SETTING,
+    epilog="Made with desperation and lots of :coffee:",
+)
 def main(
     running: Annotated[
         bool,
         typer.Option(
             "-r",
             "--keep-running",
-            help="Keep programs running (DEFAULT); inhibit automatic",
+            help="Keep programs running [b](DEFAULT)[/]; inhibit automatic",
             metavar="🥱",
         ),
     ] = False,
