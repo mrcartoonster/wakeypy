@@ -9,7 +9,11 @@ from .text_print import running_presenting, running_programs
 app = typer.Typer()
 
 
-@app.command()
+# Create -h short name
+CONTEXT_SETTING = dict(help_option_names=["-h", "--help"])
+
+
+@app.command(context_settings=CONTEXT_SETTING)
 def main(
     running: Annotated[
         bool,
@@ -17,6 +21,7 @@ def main(
             "-r",
             "--keep-running",
             help="Keep programs running (DEFAULT); inhibit automatic",
+            metavar="🥱",
         ),
     ] = False,
     presenting: Annotated[
@@ -25,6 +30,7 @@ def main(
             "-p",
             "--keep-presenting",
             help="Display is kept on and automatic screenlock disabled.",
+            metavar="😵",
         ),
     ] = False,
     version: Annotated[
