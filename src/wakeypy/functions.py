@@ -8,7 +8,7 @@ import typer
 import wakepy
 from rich.console import Console
 
-toml = Path('/Users/evanbaird/Projects/Learning/wakeypy/pyproject.toml')
+toml = Path("/Users/evanbaird/Projects/Learning/wakeypy/pyproject.toml")
 
 
 with toml.open(mode="rb") as fp:

@@ -6,7 +6,6 @@ import typer
 from .functions import keep_presenting, keep_returning, version_callback
 from .text_print import running_presenting, running_programs
 
-
 app = typer.Typer()
 
 
@@ -53,6 +52,7 @@ def main(
     else:
         running_programs()
         keep_returning()
+
 
 if __name__ == "__main__":
     app()
