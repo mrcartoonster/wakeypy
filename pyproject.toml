@@ -3,10 +3,8 @@ name = "wakeypy"
 version = "0.1.2"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { name = "Evan Baird", email = "evanbaird@evans-mbp.lan" }
-]
-requires-python = ">=3.12"
+authors = [{ name = "Evan Baird", email = "evanbaird@evans-mbp.lan" }]
+requires-python = ">=3.10"
 dependencies = [
     "art>=6.4",
     "httpx>=0.28.1",
@@ -22,11 +20,18 @@ wakeypy = "wakeypy.main:app"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.pytest.ini_options]
+addopts = "-rssxX -l --tb=short --strict --emoji -vvv -p no:warnings"
+xfail_strict = "True"
+markers = ["smoke", "fire", "verify"]
+
+testpaths = "tests"
 [dependency-groups]
 dev = [
     "ipython>=8.32.0",
     "pre-commit>=4.1.0",
     "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
     "pytest-emoji>=0.2.0",
     "pytest-pretty>=1.2.0",
 ]

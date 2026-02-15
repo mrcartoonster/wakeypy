@@ -9,6 +9,12 @@ from .text_print import running_presenting, running_programs
 app = typer.Typer(rich_markup_mode="rich")
 
 
+#TODO: Create a GitHub Action with UV: https://shorturl.at/PO9RK. View GitHub Actions Calmcode first: https://shorturl.at/erTHx
+#TODO: Create a GitHub Action with tests that will publish update to PyPi via GitHub action: https://shorturl.at/iTTWl
+#TODO: Create the __main__.py: https://shorturl.at/Kt66X
+#TODO: Create sub-command to clean up main.py: https://shorturl.at/8AdHt
+#TODO: Create a tutorial building a typer package with uv using the example from the typer tutorial.
+
 # Create -h short name
 CONTEXT_SETTING = dict(help_option_names=["-h", "--help"])
 
