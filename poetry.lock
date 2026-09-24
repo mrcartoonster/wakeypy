@@ -365,18 +365,6 @@ files = [
 tests = ["pytest"]
 
 [[package]]
-name = "pyfiglet"
-version = "1.0.4"
-description = "Pure-python FIGlet implementation"
-optional = false
-python-versions = ">=3.9"
-groups = ["main"]
-files = [
-    {file = "pyfiglet-1.0.4-py3-none-any.whl", hash = "sha256:65b57b7a8e1dff8a67dc8e940a117238661d5e14c3e49121032bd404d9b2b39f"},
-    {file = "pyfiglet-1.0.4.tar.gz", hash = "sha256:db9c9940ed1bf3048deff534ed52ff2dafbbc2cd7610b17bb5eca1df6d4278ef"},
-]
-
-[[package]]
 name = "pygments"
 version = "2.21.0"
 description = "Pygments is a syntax highlighting package written in Python."
@@ -665,4 +653,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "61567b5ee2817ee1416d3ba3e9e30c088e1054aa6bb8b6db3f7184f81fcdaff6"
+content-hash = "0eb185fdb95c8f8efba17a2303e4f0f2d2d683367475833b69c398b2b65d69ea"
